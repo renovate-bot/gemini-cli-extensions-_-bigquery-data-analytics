@@ -1,0 +1,19 @@
+{
+  "name": "BigQuery",
+  "version": "0.1.0",
+  "description": "Connect to BigQuery",
+  "mcpServers": {
+    "BigQuery": {
+      "command": "${extensionPath}${/}toolbox",
+      "args": [
+        "--prebuilt",
+        "bigquery",
+        "--stdio"
+      ],
+      "env": {
+        "BIGQUERY_PROJECT": "${BIGQUERY_PROJECT}"
+      }
+    }
+  },
+  "contextFileName": "BIGQUERY.md"
+}
