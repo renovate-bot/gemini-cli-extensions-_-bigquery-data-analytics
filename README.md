@@ -1,55 +1,67 @@
 # Gemini CLI Extension - BigQuery
 
-This Gemini CLI extension provides a set of tools to interact with [BigQuery](https://cloud.google.com/bigquery/docs) instances. It allows you to manage your databases, execute queries, and explore schemas directly from the [Gemini CLI](https://google-gemini.github.io/gemini-cli/), using natural language prompts.
+Developers can effortlessly connect, interact, and generate data insights with [BigQuery](https://cloud.google.com/bigquery/docs) datasets and data using natural language commands.
 
-## Features
+Learn more about [Gemini CLI Extensions](https://github.com/google-gemini/gemini-cli/blob/main/docs/extension.md).
+## Why Use the BigQuery Extension?
 
-* **Integrated with Gemini CLI:** As a Google-developed extension, it integrates seamlessly into the Gemini CLI environment, making security an accessible part of your workflow.
-* **Connect to BigQuery:** Securely connect to your BigQuery instances.
-* **Explore Database Schema:** List datasets, tables, and views.
-* **Query your Database:** Execute SQL queries against your database.
-
-## Supported Tools
-
-* ask-data-insights: Use this tool to perform data analysis, get insights, or answer complex questions about the contents of specific BigQuery tables.
-* execute-sql: Use this tool to execute sql statements.
-* forecast: Use this tool to forecast time series data.
-* get-dataset-info: Use this tool to get dataset metadata.
-* get-table-info: Use this tool to get table metadata.
-* list-dataset-ids: Use this tool to list datasets.
-* list-table-ids: Use this tool to list tables.
+*   **Natural Language Management:** Stop wrestling with complex commands. Explore schemas and query data by describing what you want in plain English.
+*   **Seamless Workflow:** Stay in your CLI. No need to constantly switch contexts to the GCP console for common database tasks.
+*   **Code Generation:** Accelerate development by asking Gemini to generate data classes and other code snippets based on your table schemas.
 
 ## Prerequisites
 
 Before you begin, ensure you have the following:
 
-* [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed.
-* A Google Cloud project with the **BigQuery API** enabled.
-* IAM Permissions
+*   [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed.
+*   A Google Cloud project with the **BigQuery API** enabled.
+*   IAM Permissions:
+    *   BigQuery User (`roles/bigquery.user`) (for executing queries and view
+        metadata)
+    *   BigQuery Metadata Viewer (`roles/bigquery.metadataViewer`) (for viewing all datasets)
+    *   BigQuery Data Editor (`roles/bigquery.dataEditor`) (for creating or modify datasets and tables)
 
 ## Installation
 
-To install the extension, use the `gemini extensions install` command:
+To install the extension, use the command:
 
 ```bash
-gemini extensions install github.com/gemini-cli-extensions/bigquery.git
+gemini extensions install github.com/gemini-cli-extensions/bigquery-data-analytics
 ```
 
 ## Configuration
 
-* `BIGQUERY_PROJECT`: The GCP project ID.
-* `BIGQUERY_LOCATION`: (Optional) Specifies the location for query jobs.
-* `BIGQUERY_USE_CLIENT_OAUTH`: (Optional) Set to `true` to use client-side OAuth for authorization.
+*   `BIGQUERY_PROJECT`: The GCP project ID.
+*   `BIGQUERY_LOCATION`: (Optional)
+*   `BIGQUERY_USE_CLIENT_OAUTH`: (Optional) Set to `true` to use client-side OAuth for authorization.
 
-## Usage
+## Usage Examples
 
-* Explore Schemas and Data
-* Generate code
+Interact with BigQuery using natural language right from your IDE:
 
-## Security
+*   **Explore Schemas and Data:**
+    * "Show me all tables in the 'orders' dataset."
+    * "What is the schema for the 'products' table?"
+    * "How many orders were placed in the last 30 days, and what were the top 5 most purchased items?"
 
-This extension executes commands against your BigQuery database. Always review the generated SQL queries before execution, especially for write operations.
+*   **Generate Code:**
+    * "Generate a Python dataclass to represent the 'customers' table."
 
-## Disclaimer
+## Supported Tools
 
-This is not an officially supported Google product. This extension is under active development, and breaking changes may be introduced.
+This extension provides a comprehensive set of tools:
+
+* `execute_sql`: Executes a SQL query.
+* `forecast`: Forecast time series data.
+* `get_dataset_info`: Get dataset metadata.
+* `get_table_info`: Get table metadata.
+* `list_dataset_ids`: Lists dataset ids in the database.
+* `list_table_ids`: Lists table ids in the database.
+
+## Additional Extensions
+
+Find additional extensions to support your entire software development lifecycle at [github.com/gemini-cli-extensions](https://github.com/gemini-cli-extensions).
+
+## Troubleshooting
+
+* "cannot execute binary file": Ensure the correct binary for your OS/Architecture has been downloaded. See [Installing the server](https://googleapis.github.io/genai-toolbox/getting-started/introduction/#installing-the-server) for more information.

@@ -1,7 +1,7 @@
 {
-  "name": "BigQuery",
+  "name": "bigquery-data-analytics",
   "version": "0.1.0",
-  "description": "Connect to BigQuery",
+  "description": "Connect, query, and generate data insights for BigQuery datasets and data.",
   "mcpServers": {
     "BigQuery": {
       "command": "${extensionPath}${/}toolbox",
@@ -15,5 +15,6 @@
       }
     }
   },
-  "contextFileName": "BIGQUERY.md"
+  "contextFileName": "BIGQUERY.md",
+  "excludeTools": ["ask_data_insights"]
 }
