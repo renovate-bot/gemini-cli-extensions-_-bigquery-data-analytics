@@ -1,5 +1,35 @@
 # Changelog
 
+## [0.2.0](https://github.com/gemini-cli-extensions/bigquery-data-analytics/compare/0.1.7...0.2.0) (2026-04-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Add support for skills ([#111](https://github.com/gemini-cli-extensions/bigquery-data-analytics/issues/111)) ([ce52772](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/ce52772854f5ec199e8a8bdb78b0be2fa98ca8ac))
+
+### Features
+
+* **skill:** Attach user agent metadata for generated skill ([mcp-toolbox#​2697](https://redirect.github.com/googleapis/mcp-toolbox/issues/2697)) ([9598a6a](https://redirect.github.com/googleapis/mcp-toolbox/commit/9598a6a32597b9c9abdb0f20c06d86a01b0d011f)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skill:** Update skill generation logic ([mcp-toolbox#​2646](https://redirect.github.com/googleapis/mcp-toolbox/issues/2646)) ([c233eee](https://redirect.github.com/googleapis/mcp-toolbox/commit/c233eee98cd9621526cb286245f3874f5bd6e7da)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skills:** Add Claude Code support to generated scripts ([mcp-toolbox#​2966](https://redirect.github.com/googleapis/mcp-toolbox/issues/2966)) ([a1609e1](https://redirect.github.com/googleapis/mcp-toolbox/commit/a1609e10a2eaf4ea68eae36acec3eed355b8a052)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skills:** Add codex user agent ([mcp-toolbox#​2973](https://redirect.github.com/googleapis/mcp-toolbox/issues/2973)) ([070e939](https://redirect.github.com/googleapis/mcp-toolbox/commit/070e9399c02f088d43175ce6bf343378beb7f584)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skills:** Tool invocation via npx ([mcp-toolbox#​2916](https://redirect.github.com/googleapis/mcp-toolbox/issues/2916)) ([377dc5b](https://redirect.github.com/googleapis/mcp-toolbox/commit/377dc5b00145a0044eef39314dd6b0ef5966fcd7)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **source/bigquery:** Restructure prebuilt toolsets ([mcp-toolbox#​2637](https://redirect.github.com/googleapis/mcp-toolbox/issues/2637)) ([dc984ba](https://redirect.github.com/googleapis/mcp-toolbox/commit/dc984badd79f54ff423713a763648c6a6880a640)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **sources/bigquery:** Support custom oauth header name ([mcp-toolbox#​2564](https://redirect.github.com/googleapis/mcp-toolbox/issues/2564)) ([d3baf77](https://redirect.github.com/googleapis/mcp-toolbox/commit/d3baf77d61ab30d97edc93587e6f0365b8523fee)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **tools/bigquerysql:** Add semantic search support ([mcp-toolbox#​2890](https://redirect.github.com/googleapis/mcp-toolbox/issues/2890)) ([862c396](https://redirect.github.com/googleapis/mcp-toolbox/commit/862c396cadfa1d95d12cc121312a81035c22cbad)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* Add Claude code plugin config ([#113](https://github.com/gemini-cli-extensions/bigquery-data-analytics/issues/113)) ([6f0d620](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/6f0d620aef0dfba5ed4ef4d3f88c8ec374d48b20))
+* Add Codex plugin config ([#114](https://github.com/gemini-cli-extensions/bigquery-data-analytics/issues/114)) ([cf41faa](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/cf41faaf774f1da7def3ee541db4f306312348cd))
+
+
+### Bug Fixes
+
+* **bigquery:** Add impersonateServiceAccount to prebuilt config ([mcp-toolbox#​2770](https://redirect.github.com/googleapis/mcp-toolbox/issues/2770)) ([9c3a748](https://redirect.github.com/googleapis/mcp-toolbox/commit/9c3a748de43eb588586f22590ff74bd433b24d68)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skill:** Fix env variable propagation ([mcp-toolbox#​2645](https://redirect.github.com/googleapis/mcp-toolbox/issues/2645)) ([5271368](https://redirect.github.com/googleapis/mcp-toolbox/commit/52713687208994c423da64333cb0a04fb483f794)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skills:** Fix integer parameter parsing through agent skills ([mcp-toolbox#​2847](https://redirect.github.com/googleapis/mcp-toolbox/issues/2847)) ([4564efe](https://redirect.github.com/googleapis/mcp-toolbox/commit/4564efe75436b4081d9f3d1f7c912bc64c13f850)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skills:** Fix skill generation template ([mcp-toolbox#​2914](https://redirect.github.com/googleapis/mcp-toolbox/issues/2914)) ([a01a15e](https://redirect.github.com/googleapis/mcp-toolbox/commit/a01a15ed1aa9a83eda8362578fed2e3a3c8dde99)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+* **skills:** Prevent empty strings overriding optional env vars in node scripts ([mcp-toolbox#​2963](https://redirect.github.com/googleapis/mcp-toolbox/issues/2963)) ([c52adeb](https://redirect.github.com/googleapis/mcp-toolbox/commit/c52adeba76fc13d0e6e415f6393def0648e478d6)) ([aac0c31](https://github.com/gemini-cli-extensions/bigquery-data-analytics/commit/aac0c3198ae14fe7e2fb64c20cbb3db1848506e2))
+
+
 ## [0.1.7](https://github.com/gemini-cli-extensions/bigquery-data-analytics/compare/0.1.6...0.1.7) (2026-01-28)
 
 
