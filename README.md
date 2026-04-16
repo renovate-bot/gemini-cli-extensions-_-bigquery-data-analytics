@@ -47,6 +47,11 @@ Before you begin, ensure you have the following:
 - Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
 - IAM Permissions:
     - BigQuery User (`roles/bigquery.user`)
+- (Optional) To use BigQuery AI/ML skills
+  - Ensure that Vertex AI API is enabled
+  - IAM permissions:
+    - BigQuery Connection User (`roles/bigquery.connectionUser`)
+    - Vertex AI User (`roles/aiplatform.user`)
 
 ## Getting Started
 
@@ -235,8 +240,9 @@ Interact with BigQuery using natural language right from your IDE:
 
 This extension provides a comprehensive set of skills:
 
-* `bigquery-data`: Use these skills when you need to handle large-scale data exploration and dataset management. Use when users need to find data assets or run SQL at scale. Provides metadata discovery and query execution across the data warehouse.
-* `bigquery-analytics`: Use these skills when you need to handle advanced data intelligence and predictive tasks. Use when a user asks "why" data changed or needs future projections. Provides automated insight generation and time-series forecasting.
+* [bigquery-data](./skills/bigquery-data/SKILL.md): Use these skills when you need to handle large-scale data exploration and dataset management. Use when users need to find data assets or run SQL at scale. Provides metadata discovery and query execution across the data warehouse.
+* [bigquery-analytics](./skills/bigquery-analytics/SKILL.md): Use these skills when you need to handle advanced data intelligence and predictive tasks. Use when a user asks "why" data changed or needs future projections. Provides automated insight generation and time-series forecasting.
+* [bigquery-ai-ml](./skills/bigquery-ai-ml/SKILL.md): Use these skills for BigQuery AI and Machine Learning queries using standard SQL and `AI.*` functions. Provides capabilities for text generation, classification, semantic search, and forecasting using pre-trained models without needing to manage custom models.
 
 ## Additional Extensions
 
